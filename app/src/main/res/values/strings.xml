@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">SUN</string>
+    <string name="aboutus">"   1.Toastes:\n             *Toast.makeText(MainActivity.this, \"Username and Password is correct\", Toast.LENGTH_SHORT).show();\n             *Toast.makeText(MainActivity.this, \"Username and Password is incorrect\", Toast.LENGTH_SHORT).show();\n             *Toast.makeText(Main2Activity.this, \"Successfully Loggedout\", Toast.LENGTH_SHORT).show();\n             *Toast.makeText(Main3Activity.this, \"position\"+position+\"value:\"+value, Toast.LENGTH_SHORT).show();\n        2.Intents:\n                * Intent intent=new Intent(MainActivity.this,Main2Activity.class);\n                startActivity(intent);\n                finish();\n                *Intent intent=new Intent(Main2Activity.this,MainActivity.class);\n                    startActivity(intent);\n                *Intent adk=new Intent(Main2Activity.this,Main3Activity.class);\n                   startActivity(adk);\n                * Intent adk=new Intent(Main3Activity.this,Main4Activity.class);\n                            startActivity(adk);\n        3.Menus:\n                * MenuInflater menuInflater=getMenuInflater();\n                   menuInflater.inflate(R.menu.main_menu,menu);\n                   return true;\n        4.ListView:\n                 ListView listView;\n                  String[] options=new String[]{\"Language\",\"Set Walpaper\",\"Set Default\",\"Notification\",\"Codings\"};\n                    listView=(ListView)findViewById(R.id.listview);\n        ArrayAdapter arrayAdapter=new ArrayAdapter (this,R.layout.options_list,options);\n        listView.setAdapter(arrayAdapter);\n        listView.setOnItemClickListener(\n                new AdapterView.OnItemClickListener() {\n                    @Override\n                    public void onItemClick(AdapterView? parent, View view, int position, long id) {\n                        String value=(String)listView.getItemAtPosition(position);\n                        Toast.makeText(Main3Activity.this, \"position\"+position+\"value:\"+value, Toast.LENGTH_SHORT).show();\n                        if (position==4){\n                            Intent adk=new Intent(Main3Activity.this,Main4Activity.class);\n                            startActivity(adk);\n                        }\n        5.SharedPreferences:\n                 String MyPreferences=\"MyPrefers\";\n                String Email=\"emailkey\";\n                String Password=\"Passkey\";\n                SharedPreferences Sharedpreference;\n                 Sharedpreference=getSharedPreferences(MyPreferences, Context.MODE_PRIVATE);\n\n        if(Sharedpreference.getString(Email,\"\").equals(\"confirm@gmail.com\"))\n        {\n            if(Sharedpreference.getString(Password,\"\").equals(\"adkdinesh\"))\n            {\n                Intent intent=new Intent(MainActivity.this,Main2Activity.class);\n                startActivity(intent);\n                finish();\n            SharedPreferences.Editor editor=Sharedpreference.edit();\n                    editor.putString(Email,user);\n                    editor.putString(Password,pass);\n                    editor.commit();\n                    Intent intent=new Intent(MainActivity.this,Main2Activity.class);\n                    startActivity(intent);\n                    finish();\n                Logout:\n         SharedPreferences.Editor editor = Sharedpreference.edit();\n                    editor.putString(Email, \"\");\n                    editor.putString(Password, \"\");\n                    editor.commit();\n"</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="user_name">confirm@gmail.com</string>
+    <string name="password">adkdinesh</string>
+    <string name="toast_codings">"       Toast.makeText(MainActivity.this, \"Username and Password is correct\", Toast.LENGTH_SHORT).show();\n        Toast.makeText(MainActivity.this, \"Username and Password is incorrect\", Toast.LENGTH_SHORT).show();\n        Toast.makeText(Main2Activity.this, \"Successfully Loggedout\", Toast.LENGTH_SHORT).show();\n         Toast.makeText(Main3Activity.this, \"position\"+position+\"value:\"+value, Toast.LENGTH_SHORT).show();"</string>
+    <string name="intent_codings">"  Intent intent=new Intent(MainActivity.this,Main2Activity.class);\n                startActivity(intent);\n                finish();\n        Intent adk=new Intent(Main2Activity.this,Main4Activity.class);\n          startActivity(adk);\n         Intent adk=new Intent(Main3Activity.this,Main4Activity.class);\n                            startActivity(adk);\n          Intent spcodings=new Intent(Main4Activity.this,Sp_Codings.class);\n                startActivity(spcodings);\n         Intent scrollcodings=new Intent(Main4Activity.this,Scroll_Codings.class);\n                startActivity(scrollcodings);\n         Intent listcodings=new Intent(Main4Activity.this,List_Codings.class);\n                startActivity(listcodings);\n         Intent menucodings=new Intent(Main4Activity.this,Menu_Codings.class);\n                startActivity(menucodings);\n        Intent intentcodings=new Intent(Main4Activity.this,Intent_codings.class);\n                startActivity(intentcodings);\n        Intent toastcodings=new Intent(Main4Activity.this, Toast_Codings.class);\n                startActivity(toastcodings);"</string>
+    <string name="menu_codings">" MenuInflater menuInflater=getMenuInflater();\n        menuInflater.inflate(R.menu.main_menu,menu);\n        return true;\n        \n        \n         if(item.getItemId()==R.id.logout_id){\n\n\n\n                    SharedPreferences.Editor editor = Sharedpreference.edit();\n                    editor.putString(Email, \"\");\n                    editor.putString(Password, \"\");\n                    editor.commit();\n                    Intent intent=new Intent(Main2Activity.this,MainActivity.class);\n                    startActivity(intent);\n                    Toast.makeText(Main2Activity.this, \"Successfully Loggedout\", Toast.LENGTH_SHORT).show();\n                    finish();\n        }\n        \n          if (item.getItemId()==R.id.about_us){\n          Intent adk=new Intent(Main2Activity.this,Main4Activity.class);\n          startActivity(adk);\n      }\n        return super.onOptionsItemSelected(item);"</string>
+    <string name="list_codings">"  ListView listView;\n    String[] options=new String[]{\"Language\",\"Set Walpaper\",\"Set Default\",\"Notification\",\"Codings\"};\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main3);\n        listView=(ListView)findViewById(R.id.listview);\n        ArrayAdapter arrayAdapter=new ArrayAdapter(this,R.layout.options_list,options);\n        listView.setAdapter(arrayAdapter);\n        listView.setOnItemClickListener(\n                new AdapterView.OnItemClickListener() {\n                    @Override\n                    public void onItemClick(AdapterView parent, View view, int position, long id) {\n                        String value=(String)listView.getItemAtPosition(position);\n                        Toast.makeText(Main3Activity.this, \"position\"+position+\"value:\"+value, Toast.LENGTH_SHORT).show();\n                        if (position==4){\n                            Intent adk=new Intent(Main3Activity.this,Main4Activity.class);\n                            startActivity(adk);\n                        }\n                    }\n                }\n        );\n    }\n\n}"</string>
+    <string name="scroll_codings">Add ScrollView in xml is enough to use ScrollView in android application\n        Error:We have to add any View inside the LinearLayout which is into the ScrollView</string>
+    <string name="sp_codings">\n        \n        Login:\n        \n         String MyPreferences=\"MyPrefers\";\n    String Email=\"emailkey\";\n    String Password=\"Passkey\";\n    SharedPreferences Sharedpreference;\n\n        \n        \n         Sharedpreference=getSharedPreferences(MyPreferences, Context.MODE_PRIVATE);\n\n        if(Sharedpreference.getString(Email,\"\").equals(\"beta@gmail.com\"))\n        {\n            if(Sharedpreference.getString(Password,\"\").equals(\"betatesting\"))\n            {\n                Intent intent=new Intent(MainActivity.this,Main2Activity.class);\n                startActivity(intent);\n                finish();\n\n\n            }\n        }\n        \n        \n        \n        \n         String user=useredit.getText().toString();\n                    String pass=passedit.getText().toString();\n\n                    SharedPreferences.Editor editor=Sharedpreference.edit();\n                    editor.putString(Email,user);\n                    editor.putString(Password,pass);\n                    editor.commit();\n        \n        \n        Logout:\n        \n                    SharedPreferences.Editor editor = Sharedpreference.edit();\n                    editor.putString(Email, \"\");\n                    editor.putString(Password, \"\");\n                    editor.commit();\n                    Intent intent=new Intent(Main2Activity.this,MainActivity.class);\n                    startActivity(intent);\n                    Toast.makeText(Main2Activity.this, \"Successfully Loggedout\", Toast.LENGTH_SHORT).show();\n                    finish();</string>
+</resources>
+
+

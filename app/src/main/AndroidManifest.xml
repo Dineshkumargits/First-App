@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ae.eies.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sun"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".Main4Activity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".Toast_Codings" />
+        <activity android:name=".Intent_codings" />
+        <activity android:name=".Menu_Codings" />
+        <activity android:name=".Scroll_Codings" />
+        <activity android:name=".List_Codings" />
+        <activity android:name=".Sp_Codings" />
+        <activity android:name=".Register" />
+        <activity android:name=".DataBaseHelper" />
+        <activity android:name=".session" />
+        <activity android:name=".Main5Activity"></activity>
+    </application>
+
+</manifest>

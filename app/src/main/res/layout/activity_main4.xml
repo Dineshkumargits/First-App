@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ae.eies.myapplication.Main4Activity"
+    android:background="@drawable/hackers_theme">
+
+
+    <Button
+        android:id="@+id/toast_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="Toast"
+        android:background="#556B2F"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp" />
+
+    <Button
+        android:id="@+id/intent_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Intent"
+        android:background="#556B2F"
+
+        android:layout_above="@+id/list_button"
+        android:layout_toRightOf="@+id/sp_button"
+        android:layout_toEndOf="@+id/sp_button" />
+
+    <Button
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+
+        android:background="#556B2F"
+        android:layout_alignBaseline="@+id/list_button"
+        android:layout_alignBottom="@+id/list_button"
+        android:layout_alignLeft="@+id/toast_button"
+        android:layout_alignStart="@+id/toast_button" />
+
+    <Button
+        android:id="@+id/list_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#556B2F"
+        android:text="ListView"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/toast_button"
+        android:layout_alignLeft="@+id/intent_button"
+        android:layout_alignStart="@+id/intent_button" />
+
+    <Button
+        android:id="@+id/scroll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ScrollView"
+        android:layout_marginBottom="61dp"
+        android:background="#556B2F"
+        android:layout_above="@+id/sp_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/sp_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#556B2F"
+        android:text="SharedPreference"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
